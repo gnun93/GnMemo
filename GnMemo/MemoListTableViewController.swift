@@ -20,11 +20,15 @@ class MemoListTableViewController: UITableViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+<<<<<<< HEAD
         super.viewWillAppear(animated)
         
         
         DataManager.shared.fetchMemo()
         tableView.reloadData()
+=======
+//        super.viewWillAppear(animated)
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
 //
 //        tableView.reloadData()
     }
@@ -41,7 +45,11 @@ class MemoListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
             if let vc = segue.destination as? DetailViewController {
+<<<<<<< HEAD
                 vc.memo = DataManager.shared.memoList[indexPath.row]
+=======
+                vc.memo = Memo.dummyMemoList[indexPath.row]
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
             }
         }
     }
@@ -69,7 +77,11 @@ class MemoListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+<<<<<<< HEAD
         return DataManager.shared.memoList.count
+=======
+        return Memo.dummyMemoList.count
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
     }
 
     
@@ -79,9 +91,15 @@ class MemoListTableViewController: UITableViewController {
         
         // Configure the cell...
         
+<<<<<<< HEAD
         let target = DataManager.shared.memoList[indexPath.row]
         cell.textLabel?.text = target.content
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
+=======
+        let target = Memo.dummyMemoList[indexPath.row]
+        cell.textLabel?.text = target.content
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
         
         
         

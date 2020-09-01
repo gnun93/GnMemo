@@ -9,25 +9,40 @@
 import UIKit
 
 class ComposeViewController: UIViewController {
+<<<<<<< HEAD
     
     var editTarget: Memo?
     var originalMemoContent: String?
     
     
     @IBAction func close(_ sender: Any) {
+=======
+
+    
+    @IBAction func cancel(_ sender: Any) {
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
         
         dismiss(animated: true, completion: nil)
     }
     
+<<<<<<< HEAD
     
     
     @IBOutlet weak var memoTextView: UITextView!
     
     
+=======
+   
+    
+    @IBOutlet weak var MemoTextView: UITextView!
+    
+ 
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
     
     
     @IBAction func save(_ sender: Any) {
         
+<<<<<<< HEAD
         guard let memo = memoTextView.text, memo.count > 0  else {
             alert(message: "메모를 입력하세요")
             return
@@ -46,6 +61,18 @@ class ComposeViewController: UIViewController {
             // 지정된 이름, 보낸 객체로 노티피케이션을 만들어 노티피케이션 센터에 발송
         }
         
+=======
+        guard let memo = MemoTextView.text, memo.count > 0  else {
+        alert(message: "메모를 입력하세요")
+            return
+                
+        }
+        
+        let newMemo = Memo(content: memo)
+        Memo.dummyMemoList.append(newMemo)
+        
+        NotificationCenter.default.post(name: ComposeViewController.newMemoDidinsert, object: nil)  // 지정된 이름, 보낸 객체로 노티피케이션을 만들어 노티피케이션 센터에 발송
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
         
         dismiss(animated: true, completion: nil)
     }
@@ -55,6 +82,7 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         if let memo = editTarget {
             navigationItem.title =  "메모 편집"
@@ -120,10 +148,30 @@ extension ComposeViewController: UIAdaptivePresentationControllerDelegate {
         present(alert, animated: true, completion: nil)
         
     }
+=======
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
 }
 
 
 extension ComposeViewController {
     static let newMemoDidinsert = Notification.Name(rawValue: "newMemoDidInsert")
+<<<<<<< HEAD
     static let memoDidChange = Notification.Name(rawValue: "memoDidChange")
+=======
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
 }

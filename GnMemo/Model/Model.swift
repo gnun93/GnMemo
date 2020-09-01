@@ -8,6 +8,7 @@
 
 import Foundation
 
+<<<<<<< HEAD
 //class Memo {
 //    var content: String
 //    var insertDate: Date
@@ -24,6 +25,24 @@ import Foundation
 //    ]
 //
 //}
+=======
+class Memo {
+    var content: String
+    var insertDate: Date
+    
+init(content: String) {
+    self.content = content
+    self.insertDate = Date()
+}
+    
+    
+static var dummyMemoList = [
+    Memo(content: "안녕하세요"),
+    Memo(content: "반갑습니다")
+    ]
+    
+}
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
 
 
 

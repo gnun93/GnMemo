@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kcI-pW-SBe">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kcI-pW-SBe">
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -77,11 +81,15 @@
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="U5i-Dp-UlY"/>
+<<<<<<< HEAD
                                     <barButtonItem systemItem="compose" id="ppV-d2-IMS">
                                         <connections>
                                             <segue destination="FFe-KH-Ef5" kind="presentation" id="OYe-mV-VUf"/>
                                         </connections>
                                     </barButtonItem>
+=======
+                                    <barButtonItem systemItem="compose" id="ppV-d2-IMS"/>
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gFR-W4-QXG"/>
                                     <barButtonItem systemItem="action" id="HQB-3G-e3n"/>
                                 </items>
@@ -143,9 +151,12 @@
                         <viewLayoutGuide key="safeArea" id="jnQ-WP-J8K"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="yJO-Ju-BQB"/>
+<<<<<<< HEAD
                     <connections>
                         <outlet property="memoTableView" destination="UHb-nh-xQ7" id="eIb-dv-wAj"/>
                     </connections>
+=======
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="My2-xK-enc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,7 +253,10 @@
             <point key="canvasLocation" x="1780" y="-496"/>
         </scene>
     </scenes>
+<<<<<<< HEAD
     <inferredMetricsTieBreakers>
         <segue reference="9qz-Iq-Vn8"/>
     </inferredMetricsTieBreakers>
+=======
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
 </document>

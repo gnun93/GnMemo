@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+<<<<<<< HEAD
     @IBOutlet weak var memoTableView: UITableView!
     
     var memo: Memo?
@@ -18,6 +19,11 @@ class DetailViewController: UIViewController {
     
     
     
+=======
+    
+    var memo: Memo?
+    
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
     let formatter: DateFormatter = {
     let f = DateFormatter()
         f.dateStyle = .long
@@ -26,6 +32,7 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+<<<<<<< HEAD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination.children.first as? ComposeViewController{
         // destination : 세그의 대상 뷰컨트롤러
@@ -48,6 +55,12 @@ class DetailViewController: UIViewController {
         token = NotificationCenter.default.addObserver(forName: ComposeViewController.memoDidChange, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
             self?.memoTableView.reloadData()
         })
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
     }
     
 
@@ -60,6 +73,10 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92aa63d72d33a2eedc190f3f6b06ff3efdfb2500
 }
 
 extension DetailViewController: UITableViewDataSource {
