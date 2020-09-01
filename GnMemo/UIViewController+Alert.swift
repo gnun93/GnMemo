@@ -17,5 +17,9 @@ extension UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
         
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+        
     }
 }

@@ -28,6 +28,8 @@ class DetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination.children.first as? ComposeViewController{
+        // destination : 세그의 대상 뷰컨트롤러
+        // children : 현재 뷰컨트롤러의 자식인 뷰 컨트롤러의 배열
             vc.editTarget = memo
         }
     }

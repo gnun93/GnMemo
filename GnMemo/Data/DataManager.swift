@@ -16,22 +16,24 @@ class DataManager {
     }
     
     var mainContenxt: NSManagedObjectContext {
-        //managed objects를 생성하고, Core Data 저장소에서 무엇이든 저장하고, 가져오는(fetch) 작업같은 걸 제공
+        
         return persistentContainer.viewContext
-        // 관리되는 객체 컨텍스트
-        // 영구 컨테이너의 뷰 컨텍스트 객체를 반환, 이 뷰 컨텍스트는 ManagedObjectContext 클래스 유형의 속성 이름입니다
+        //객체 콘텍스트 얻기
     }
     
     
-    var memoList = [Memo]()
+    var memoList = [Memo]() //메모리스트에 메모 배열 생성
         func fetchMemo() {
             let request: NSFetchRequest<Memo> = Memo.fetchRequest()
             //NSFetchRequest는 코어 데이터에서 가져 오는 역할을 담당하는 클래스
-            let sortByDateDesc = NSSortDescriptor(key: "insertDate", ascending: false)
+            //데이터베이스에서 데이터를 읽어올때는 FetchRequest 생성
+            let sortByDateDesc = NSSortDescriptor(key: "insertDate", ascending: false) // key값 기준으로 내림차로 정렬
             request.sortDescriptors = [sortByDateDesc]
             
             do {
                 memoList = try mainContenxt.fetch(request)
+                // context가 제공하는 fetch메소드 throws 예외가 발생할수도 있음.
+                // 예외처리 do-catch
             } catch {
                 print(error)
                 
